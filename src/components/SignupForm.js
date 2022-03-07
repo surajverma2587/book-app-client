@@ -2,7 +2,6 @@ import { gql, useMutation } from "@apollo/client";
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 
-import { createUser } from "../utils/API";
 import Auth from "../utils/auth";
 
 const SignupForm = () => {
@@ -55,8 +54,7 @@ const SignupForm = () => {
         throw new Error("something went wrong!");
       }
 
-      const { token, user } = data.addUser;
-      console.log(user);
+      const { token } = data.addUser;
       Auth.login(token);
     } catch (err) {
       console.error(err);
