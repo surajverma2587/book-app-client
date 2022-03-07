@@ -13,7 +13,7 @@ import SavedBooks from "./pages/SavedBooks";
 import Navbar from "./components/Navbar";
 
 const httpLink = createHttpLink({
-  uri: process.env.MONGODB_URI || "http://localhost:4000",
+  uri: process.env.GRAPHQL_API || "http://localhost:4000",
   credentials: "same-origin",
 });
 
